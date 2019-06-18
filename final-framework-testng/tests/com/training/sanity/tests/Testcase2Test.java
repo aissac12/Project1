@@ -81,6 +81,7 @@ public class Testcase2Test {
 		logger2.log(LogStatus.PASS, "Selected the Product");
 		testcase2.clickDelete();
 		logger2.log(LogStatus.PASS, "Deleted the product");
+		
 		screenShot.captureScreenShot("First");
 		
 	}

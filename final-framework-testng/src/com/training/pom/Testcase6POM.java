@@ -34,7 +34,7 @@ private WebDriver driver;
 	@FindBy(linkText="Customers")
 	private WebElement Custombtn; 
 	
-	@FindBy(xpath="//input[@name='selected[]' and @value='770']")	//756 is deleted,use 770
+	@FindBy(xpath="//input[@name='selected[]' and @value='778']")	//756 is deleted,use 770
 	private WebElement Cname; 
 	
 	@FindBy(xpath="//button[@data-original-title='Delete']")

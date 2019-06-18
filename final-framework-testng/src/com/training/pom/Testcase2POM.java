@@ -37,6 +37,9 @@ private WebDriver driver;
 	@FindBy(xpath="//button[@data-original-title='Delete']")
 	private WebElement delet; 
 	
+	@FindBy(xpath="//*[@class='alert alert-success']")
+	private WebElement success; 
+	
 	public void sendUserName(String userName) {
 		this.userName.clear();
 		this.userName.sendKeys(userName);
@@ -66,12 +69,21 @@ private WebDriver driver;
 	}
 	
 	public void clickDelete() throws InterruptedException {
+		String Actualstr,Expectedstr,Actual;
 		Assert.assertTrue(Pname.isSelected());
 		Thread.sleep(1000);
 		this.delet.click();
 		Thread.sleep(1000);
 		//driver.switchTo().alert().dismiss();
 		driver.switchTo().alert().accept();
+		
+		Actualstr=this.success.getText().replace("\n","");
+		
+		Actual=Actualstr.replace("×","");
+		System.out.println(Actual);
+
+		Expectedstr="Success: You have modified products!";
+		Assert.assertEquals(Actual, Expectedstr);	
 		
 		
 	}
