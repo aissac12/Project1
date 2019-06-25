@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="23644" started-at="2019-06-25T14:18:16Z" finished-at="2019-06-25T14:18:39Z">
+  <suite name="Suite" duration-ms="24714" started-at="2019-06-25T14:27:01Z" finished-at="2019-06-25T14:27:26Z">
     <groups>
       <group name="smoke">
         <method signature="MediumTest3groups.mediumtc3()[pri:1, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="mediumtc3" class="com.training.sanity.tests.MediumTest3groups"/>
         <method signature="MediumTest3groups.mediumtc3a()[pri:2, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="mediumtc3a" class="com.training.sanity.tests.MediumTest3groups"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Smoke" duration-ms="23644" started-at="2019-06-25T14:18:16Z" finished-at="2019-06-25T14:18:39Z">
+    <test name="Smoke" duration-ms="24714" started-at="2019-06-25T14:27:01Z" finished-at="2019-06-25T14:27:26Z">
       <class name="com.training.sanity.tests.MediumTest3groups">
-        <test-method status="PASS" signature="extentreport()[pri:0, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="extentreport" is-config="true" duration-ms="11348" started-at="2019-06-25T19:48:16Z" finished-at="2019-06-25T19:48:27Z">
+        <test-method status="PASS" signature="extentreport()[pri:0, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="extentreport" is-config="true" duration-ms="11730" started-at="2019-06-25T19:57:01Z" finished-at="2019-06-25T19:57:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentreport -->
-        <test-method status="PASS" signature="mediumtc3()[pri:1, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="mediumtc3" duration-ms="2971" started-at="2019-06-25T19:48:27Z" finished-at="2019-06-25T19:48:30Z">
+        <test-method status="PASS" signature="mediumtc3()[pri:1, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="mediumtc3" duration-ms="3608" started-at="2019-06-25T19:57:13Z" finished-at="2019-06-25T19:57:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mediumtc3 -->
-        <test-method status="PASS" signature="mediumtc3a()[pri:2, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="mediumtc3a" duration-ms="5945" started-at="2019-06-25T19:48:30Z" finished-at="2019-06-25T19:48:36Z">
+        <test-method status="PASS" signature="mediumtc3a()[pri:2, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="mediumtc3a" duration-ms="6242" started-at="2019-06-25T19:57:17Z" finished-at="2019-06-25T19:57:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mediumtc3a -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="tearDown" is-config="true" duration-ms="3325" started-at="2019-06-25T19:48:36Z" finished-at="2019-06-25T19:48:39Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.MediumTest3groups@1fbc7afb]" name="tearDown" is-config="true" duration-ms="3077" started-at="2019-06-25T19:57:23Z" finished-at="2019-06-25T19:57:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

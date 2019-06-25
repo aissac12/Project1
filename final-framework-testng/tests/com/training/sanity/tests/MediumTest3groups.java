@@ -63,7 +63,7 @@ public class MediumTest3groups {
 	}
 	
 	
-	@Test(groups= {"smoke"},priority=1,alwaysRun=true)
+	@Test(groups= {"smoke"},priority=1)
 	public void mediumtc3() throws InterruptedException {
 		medtest1.sendUserName("admin");
 		medtest1.sendPassword("admin@123");
@@ -71,7 +71,7 @@ public class MediumTest3groups {
 		logger3.log(LogStatus.PASS, "Logged in successfully");
 	}
 		
-	@Test(groups= {"smoke"},priority=2,alwaysRun=true)
+	@Test(groups= {"smoke"},priority=2)
 	public void mediumtc3a() throws InterruptedException {
 	medtest3.clickCart();
 	logger3.log(LogStatus.PASS, "Clicked on Returns");
@@ -80,7 +80,7 @@ public class MediumTest3groups {
 		logger3.log(LogStatus.PASS, "Added New Return Product");
 	}
 		
-	@Test(groups= {"last"},priority=3,alwaysRun=true)
+	@Test(groups= {"last"},priority=3)
 	public void mediumtc3b() throws InterruptedException {
 	medtest3.ReturnDetails("25","Sarah","Renu","mathur","renu.mathur@gmail.com","9453234554"," Blazer Girls","BLG-112");
 	medtest3.Delete();
