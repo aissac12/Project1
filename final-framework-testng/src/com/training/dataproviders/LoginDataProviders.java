@@ -30,13 +30,13 @@ public class LoginDataProviders {
 		return result;
 	}
 	
-	@DataProvider(name = "excel-inputs")
+	@DataProvider(name = "excel-inputs")		//apache poi
 	public Object[][] getExcelData(){
 		String fileName ="C:/Users/Naveen/Desktop/Testing.xlsx"; 
 		return new ApachePOIExcelRead().getExcelContent(fileName); 
 	}
 	
-	@DataProvider(name = "xls-inputs")
+	@DataProvider(name = "xls-inputs")		//jxl
 	public Object[][] getXLSData(){
 		// ensure you will have the title as first line in the file 
 		return new ReadExcel().getExcelData("C:/Users/Naveen/Desktop/Testing.xls", "Sheet1"); 
