@@ -7,16 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import com.training.bean.LoginBean;
+import com.training.bean.ComplexBean1;
 import com.training.connection.GetConnection;
 import com.training.utility.LoadDBDetails;
 
 // Data Access Object 
-public class ELearningDAO {
+public class Complex1DAO {
 	
 	Properties properties; 
 	
-	public ELearningDAO() {
+	public Complex1DAO() {
 		 try {
 			properties = new Properties();
 			FileInputStream inStream = new FileInputStream("./resources/sql.properties");
@@ -27,22 +27,26 @@ public class ELearningDAO {
 		}
 	}
 	
-	public List<LoginBean> getLogins(){
+	public List<ComplexBean1> getLogins(){
 		String sql = properties.getProperty("get.logins"); 
 		
 		GetConnection gc  = new GetConnection(); 
-		List<LoginBean> list = null;
+		List<ComplexBean1> list = null;
 		try {
 			gc.ps1 = GetConnection.getMySqlConnection(LoadDBDetails.getDBDetails()).prepareStatement(sql); 
-			list = new ArrayList<LoginBean>(); 
+			list = new ArrayList<ComplexBean1>(); 
 			
 			gc.rs1 = gc.ps1.executeQuery(); 
 			
 			while(gc.rs1.next()) {
 			
-				LoginBean temp = new LoginBean(); 
+				ComplexBean1 temp = new ComplexBean1(); 
 				temp.setUserName(gc.rs1.getString(1));		//first col-admin/ancy
 				temp.setPassword(gc.rs1.getString(2));		//second col- admin@123/sarah
+				temp.setProduct(gc.rs1.getString(3));
+				temp.setTitle(gc.rs1.getString(4));
+				temp.setPrice(gc.rs1.getInt(5));
+				temp.setQuantity(gc.rs1.getInt(6));
 
 				list.add(temp); 
 				
@@ -55,7 +59,7 @@ public class ELearningDAO {
 	}
 	
 	public static void main(String[] args) {
-		new ELearningDAO().getLogins().forEach(System.out :: println);
+		new Complex1DAO().getLogins().forEach(System.out :: println);
 	}
 	
 	

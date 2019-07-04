@@ -86,6 +86,9 @@ public class MediumTest2 {
 		medtest2.CatDetails("Sports Uniform","Uniform for Sports","Sports Uniform","Uniform for Sports");
 		logger2.log(LogStatus.PASS, "Added category details and saved ");
 		
+		String Exp = "Success: You have modified categories!";
+		Assert.assertEquals(medtest2.successftn1(),Exp);
+		
 		medtest2.clickProducts();
 		logger2.log(LogStatus.PASS, "Clicked on Products ");
 		
@@ -97,6 +100,8 @@ public class MediumTest2 {
 		
 		
 		
+		String Exp1 = "Success: You have modified products!";
+		Assert.assertEquals(medtest2.successftn(),Exp1);
 		
 		screenShot.captureScreenShot("First");
 		

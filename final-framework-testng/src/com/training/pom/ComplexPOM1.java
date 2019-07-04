@@ -2,68 +2,77 @@ package com.training.pom;
 
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
-public class MediumPOM2 {
+public class ComplexPOM1 {
 	
 private WebDriver driver; 
 	
-	public MediumPOM2(WebDriver driver) {
+	public ComplexPOM1(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(id="input-username")
+	private WebElement userName; 
+	
+	@FindBy(id="input-password")
+	private WebElement password;
+	
+	@FindBy(xpath="//*[@class='btn btn-primary']")
+	private WebElement loginBtn; 
+	
 	@FindBy(xpath="//*[@id='catalog']")
 	private WebElement catbtn; 
 	
-	@FindBy(linkText="Categories")
-	private WebElement categbtn; 
 	
 	@FindBy(linkText="Products")
-	private WebElement prodbtn; 
+	private WebElement prodbtn;  
 	
 	@FindBy(xpath="//*[@data-original-title='Add New']")
 	private WebElement addnew; 
-	
-	@FindBy(xpath="//*[@name='category_description[1][name]']")
-	private WebElement catname; 
-	
-	@FindBy(xpath="//*[@class='note-editable panel-body']")
-	private WebElement description; 
-	
-	@FindBy(xpath="//*[@name='category_description[1][meta_title]']")
-	private WebElement megatitle; 
-	
-	@FindBy(xpath="//*[@name='category_description[1][meta_description]']")
-	private WebElement megadesc; 
-	
-	@FindBy(xpath="//*[@data-original-title='Save']")
-	private WebElement savebtn; 
-	
-	@FindBy(xpath="//div[@class='alert alert-success']")
-	private WebElement success; 
 	
 	@FindBy(css="input#input-name1")
 	private WebElement prodnam;
 	
 	@FindBy(css="input#input-meta-title1")
 	private WebElement prodtitle;
-	
+
 	@FindBy(linkText="Data")
 	private WebElement datatab; 
+
+	@FindBy(name="model")
+	private WebElement model; 
+	
+	@FindBy(id="input-price")
+	private WebElement price;
+	
+	@FindBy(id="input-quantity")
+	private WebElement qty;
+	
+	
+	public void sendUserName(String userName) {
+		this.userName.clear();
+		this.userName.sendKeys(userName);
+	}
+	
+	public void sendPassword(String password) {
+		this.password.clear(); 
+		this.password.sendKeys(password); 
+	}
+	
+	public void clickLoginBtn() {
+		this.loginBtn.click(); 
+	}
 	
 	@FindBy(linkText="Links")
 	private WebElement linktab; 
 	
-	@FindBy(name="model")
-	private WebElement model; 
 	
 	@FindBy(name="category")
 	private WebElement categ;
@@ -101,15 +110,11 @@ private WebDriver driver;
 	@FindBy(linkText="Design")
 	private WebElement design_tab;
 	
-
-	public void clickCategories() throws InterruptedException { 
-		Thread.sleep(1000);
-		Actions action = new Actions(driver);	 
-        action.moveToElement(catbtn).build().perform();
-        Thread.sleep(1000);
-        this.categbtn.click();   
-        
-	}
+	@FindBy(xpath="//*[@data-original-title='Save']")
+	private WebElement savebtn; 
+	
+	@FindBy(xpath="//div[@class='alert alert-success']")
+	private WebElement success; 
 	
 	public void clickProducts() throws InterruptedException { 
 		Thread.sleep(1000);
@@ -125,37 +130,8 @@ private WebDriver driver;
 		this.addnew.click();
 	}
 	
-	public void CatDetails(String name,String desc,String mega,String megades) throws InterruptedException { 
-		//String Exp = "Success: You have modified categories!";
-		Thread.sleep(1000);
-		this.catname.sendKeys(name);
-		System.out.println("Category name : " + this.catname.getAttribute("value"));
-		Thread.sleep(1000);
-		this.description.sendKeys(desc);
-		System.out.println("Category description : " + this.description.getText());	
-		Thread.sleep(1000);
-		this.megatitle.sendKeys(mega);
-		System.out.println("Meta tag title : " + this.megatitle.getAttribute("value"));
-		Thread.sleep(1000);
-		this.megadesc.sendKeys(megades);
-		System.out.println("Meta tag description : " + this.megadesc.getAttribute("value"));
-		Thread.sleep(1000);
-		this.savebtn.click();
-		Thread.sleep(1000);
-		
-	}
-	
-	public String successftn1()
+	public void ProdDetails(String name, String title, String mod, String rs, String quant) throws InterruptedException
 	{
-		String Act = this.success.getText().replace("\n","");
-		String Actual=Act.replace("×","");
-		System.out.println(Actual);
-		return Actual;
-	}	
-	
-	public void ProdDetails(String name, String title, String mod) throws InterruptedException
-	{
-		//String Exp1 = "Success: You have modified products!";
 		
 		Thread.sleep(1000);
 		this.prodnam.sendKeys(name);
@@ -167,11 +143,16 @@ private WebDriver driver;
 		System.out.println("Title : " + this.prodtitle.getAttribute("value"));
 		Thread.sleep(1000);
 		//jse.executeScript("window.scrollBy(350,0)", "");	//scrolling fast
-		Thread.sleep(2000);
 		this.datatab.click();
 		Thread.sleep(1000);
 		this.model.sendKeys(mod);
 		System.out.println("Model : " + this.model.getAttribute("value"));
+		Thread.sleep(1000);
+		this.price.sendKeys(rs);
+		System.out.println("Price : " + this.price.getAttribute("value"));
+		Thread.sleep(1000);
+		this.qty.sendKeys(quant);
+		System.out.println("Quantity : " + this.qty.getAttribute("value"));
 		Thread.sleep(1000);
 		
 		this.linktab.click();
@@ -181,7 +162,6 @@ private WebDriver driver;
 		this.sports.click();
 		System.out.println("Category List : " + this.text.getText());
 		Thread.sleep(1000);
-		
 		this.attribute_tab.click();
 		Thread.sleep(1000);
 		this.option_tab.click();
@@ -211,5 +191,7 @@ private WebDriver driver;
 		System.out.println(Actual1);
 		return Actual1;
 	}	
+	
+	
 	
 }

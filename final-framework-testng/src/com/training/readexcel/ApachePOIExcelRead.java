@@ -31,10 +31,10 @@ public class ApachePOIExcelRead {
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
 			// Get first/desired sheet from the workbook
-			XSSFSheet sheet = workbook.getSheetAt(0);
+			XSSFSheet sheet = workbook.getSheetAt(0);	//index of sheet,getsheet(sheetname)
 			
 			int rowTotal = sheet.getLastRowNum();
-
+System.out.println("No of rows : " + rowTotal);
 			if ((rowTotal > 0) || (sheet.getPhysicalNumberOfRows() > 0)) {
 			    rowTotal++;
 			}
@@ -42,7 +42,7 @@ public class ApachePOIExcelRead {
 			
 			// Iterate through each rows one by one
 			Iterator<Row> rowIterator = sheet.iterator();
-			 list1 = new String[rowTotal][2];
+			 list1 = new String[rowTotal][5];
 			 
 			while (rowIterator.hasNext()) {
 				Row row = rowIterator.next();
@@ -51,6 +51,7 @@ public class ApachePOIExcelRead {
 
 				int cellCount = 0; 
 				int noOfColumns = row.getLastCellNum(); 
+				System.out.println("No of colums : "+ noOfColumns);
 				String[] tempList1 = new String[noOfColumns];
 				
 				
@@ -74,7 +75,7 @@ public class ApachePOIExcelRead {
 					}
 					cellCount ++; 
 				}
-				if(tempList1 != null){
+ 				if(tempList1 != null){
 					list1[rowCount++] = tempList1;
 				}
 			}
@@ -89,7 +90,8 @@ public class ApachePOIExcelRead {
 	}
 
 	public static void main(String[] args) {
-		String fileName = "C:/Users/Naveen/Desktop/Testing.xlsx";
+		//String fileName = "C:/Users/Naveen/Desktop/Testing.xlsx";
+		String fileName = "C:/Users/AncyIssac/Desktop/java_elcipse/selenium/TestData_3.xlsx";
 		
 		for(String [] temp : new ApachePOIExcelRead().getExcelContent(fileName)){
 			for(String  tt : temp){
