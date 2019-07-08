@@ -26,7 +26,6 @@ private WebDriver driver;
 	@FindBy(name="option[370]")
 	private WebElement size;
 	
-	
 	@FindBy(id="button-cart")
 	private WebElement add_cart;
 	
