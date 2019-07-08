@@ -77,7 +77,7 @@ private WebDriver driver;
 	@FindBy(name="category")
 	private WebElement categ;
 	
-	@FindBy(xpath="//div[@class='col-sm-10']/ul/li[7]/a")
+	@FindBy(xpath="//div[@class='col-sm-10']/ul/li[3]/a")
 	private WebElement sports;
 	
 	@FindBy(xpath="//*[@name='category']")
@@ -132,9 +132,10 @@ private WebDriver driver;
 	
 	public void ProdDetails(String name, String title, String mod, String rs, String quant) throws InterruptedException
 	{
-		
 		Thread.sleep(1000);
 		this.prodnam.sendKeys(name);
+		System.out.println("Product : " + this.prodnam.getAttribute("value"));
+		
 		Thread.sleep(1000);
 		//JavascriptExecutor jse = (JavascriptExecutor)driver;
 		//jse.executeScript("window.scrollBy(0,250)", "");

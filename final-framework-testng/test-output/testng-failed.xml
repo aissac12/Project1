@@ -3,15 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.ComplexTest1">
+      <class name="com.training.regression.tests.ComplexExcelTest3">
         <methods>
-          <include name="mediumtc1"/>
+          <include name="ExcelTest"/>
           <include name="setUpBeforeClass"/>
           <include name="tearDown"/>
-          <include name="extentreport"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.ComplexTest1 -->
+      </class> <!-- com.training.regression.tests.ComplexExcelTest3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,7 +3,7 @@ package com.training.pom;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
+//import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -19,8 +19,6 @@ private WebDriver driver;
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
-	
-	
 	
 	@FindBy(xpath="//*[@class='img-responsive']")
 	private WebElement shirt;
@@ -139,7 +137,7 @@ private WebDriver driver;
 	
 	//user tab
 	
-	@FindBy(xpath="//*[@class='caret']")
+	@FindBy(xpath="//*[@class='dropdown myaccount']")
 	private WebElement loginmenu;
 	
 	@FindBy(linkText="Login")

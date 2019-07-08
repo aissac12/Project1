@@ -4,10 +4,8 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 public class ComplexPOM3 {
 	
@@ -45,12 +43,12 @@ private WebDriver driver;
 	@FindBy(xpath="//*[@data-original-title='Return']")
 	private WebElement ret; 
 	
-	@FindBy(xpath="//*[@name='return_reason_id' and @value='1']")
-	private WebElement ret_btn;
+	@FindBy(xpath="//*[@name='return_reason_id']")
+	private List<WebElement> ret_btn;
 	
 	
-	@FindBy(xpath="//*[@name='opened' and @value='1']")
-	private WebElement open_btn;
+	@FindBy(xpath="//*[@name='opened']")
+	private List<WebElement> open_btn;
 	
 	@FindBy(id="input-comment")
 	private WebElement comment;
@@ -63,6 +61,9 @@ private WebDriver driver;
 	
 	@FindBy(xpath="//div[@id='content']/p")
 	private WebElement submit_ret; 
+	
+	@FindBy(xpath="//div[@id='content']/p[2]")
+	private WebElement submit_ret1; 
 	
 	public void userLogin() throws InterruptedException
 	{
@@ -98,12 +99,15 @@ private WebDriver driver;
 		Thread.sleep(1000);
 	}
 	
-		public void ordReturn(String comment) throws InterruptedException
+		public void ordReturn(String comment,String inp,String open) throws InterruptedException
 		{
+			int inp1=Integer.parseInt(inp);
+			int open1=Integer.parseInt(open);
+			//System.out.println("input1=" + inp1);
+		this.ret_btn.get(inp1).click();
 		
-		this.ret_btn.click();
 		Thread.sleep(1000);
-		this.open_btn.click();
+		this.open_btn.get(open1).click();
 		Thread.sleep(1000);
 		this.comment.sendKeys(comment);
 		Thread.sleep(1000);
@@ -116,9 +120,12 @@ private WebDriver driver;
 	public String successftn()
 	{
 		String Act3 = this.submit_ret.getText().replace("\n","");
+		String Act3b = this.submit_ret1.getText().replace("\n","");
 		String Actual3=Act3.replace("×","");
-		System.out.println(Actual3);
-		return Actual3;
+		String Actual3b=Act3b.replace("×","");
+		String Actual=Actual3+Actual3b;		//combining both lines
+		System.out.println(Actual);
+		return Actual;
 	}
 
 

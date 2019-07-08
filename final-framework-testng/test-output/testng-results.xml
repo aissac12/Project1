@@ -1,108 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="73274" started-at="2019-07-04T06:37:54Z" finished-at="2019-07-04T06:39:08Z">
+  <suite name="Default suite" duration-ms="163741" started-at="2019-07-08T07:22:58Z" finished-at="2019-07-08T07:25:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="73274" started-at="2019-07-04T06:37:54Z" finished-at="2019-07-04T06:39:08Z">
-      <class name="com.training.sanity.tests.ComplexTest1">
-        <test-method status="PASS" signature="extentreport()[pri:0, instance:com.training.sanity.tests.ComplexTest1@3cb5cdba]" name="extentreport" is-config="true" duration-ms="900" started-at="2019-07-04T12:07:54Z" finished-at="2019-07-04T12:07:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentreport -->
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ComplexTest1@3cb5cdba]" name="setUpBeforeClass" is-config="true" duration-ms="15" started-at="2019-07-04T12:07:55Z" finished-at="2019-07-04T12:07:55Z">
+    <test name="Default test" duration-ms="163741" started-at="2019-07-08T07:22:58Z" finished-at="2019-07-08T07:25:42Z">
+      <class name="com.training.regression.tests.ComplexExcelTest3">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="setUpBeforeClass" is-config="true" duration-ms="100" started-at="2019-07-08T12:52:58Z" finished-at="2019-07-08T12:52:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.ComplexTest1@3cb5cdba]" name="setUp" is-config="true" duration-ms="13819" started-at="2019-07-04T12:07:55Z" finished-at="2019-07-04T12:08:09Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="setUp" is-config="true" duration-ms="15230" started-at="2019-07-08T12:53:01Z" finished-at="2019-07-08T12:53:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="mediumtc1()[pri:0, instance:com.training.sanity.tests.ComplexTest1@3cb5cdba]" name="mediumtc1" duration-ms="55516" started-at="2019-07-04T12:08:09Z" finished-at="2019-07-04T12:09:05Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='col-sm-10']/ul/li[7]/a"}
-  (Session info: chrome=75.0.3770.100)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'AISSAC12', ip: '192.168.0.87', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51033}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}), userDataDir=C:\Users\ANCYIS~1\AppData\Local\Temp\scoped_dir11432_20071}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=75.0.3770.100, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 42d27a1d010fda985308bec555c6d4ca
-*** Element info: {Using=xpath, value=//div[@class='col-sm-10']/ul/li[7]/a}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='col-sm-10']/ul/li[7]/a"}
-  (Session info: chrome=75.0.3770.100)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'AISSAC12', ip: '192.168.0.87', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51033}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}), userDataDir=C:\Users\ANCYIS~1\AppData\Local\Temp\scoped_dir11432_20071}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=75.0.3770.100, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 42d27a1d010fda985308bec555c6d4ca
-*** Element info: {Using=xpath, value=//div[@class='col-sm-10']/ul/li[7]/a}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.training.pom.ComplexPOM1.ProdDetails(ComplexPOM1.java:162)
-	at com.training.sanity.tests.ComplexTest1.mediumtc1(ComplexTest1.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="ExcelTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="ExcelTest" duration-ms="28590" started-at="2019-07-08T12:53:17Z" data-provider="excel-inputs" finished-at="2019-07-08T12:53:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anandhu@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[anandhuudayan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[0.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[0.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[product is not working]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mediumtc1 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ComplexTest1@3cb5cdba]" name="tearDown" is-config="true" duration-ms="2925" started-at="2019-07-04T12:09:05Z" finished-at="2019-07-04T12:09:08Z">
+        </test-method> <!-- ExcelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1440" started-at="2019-07-08T12:53:45Z" finished-at="2019-07-08T12:53:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.ComplexTest1 -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="setUp" is-config="true" duration-ms="8988" started-at="2019-07-08T12:53:47Z" finished-at="2019-07-08T12:53:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="ExcelTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="ExcelTest" duration-ms="26906" started-at="2019-07-08T12:53:56Z" data-provider="excel-inputs" finished-at="2019-07-08T12:54:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[princeissac@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[princeissac]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[0.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[product is faulty]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExcelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1504" started-at="2019-07-08T12:54:23Z" finished-at="2019-07-08T12:54:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="setUp" is-config="true" duration-ms="10516" started-at="2019-07-08T12:54:24Z" finished-at="2019-07-08T12:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="ExcelTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="ExcelTest" duration-ms="26344" started-at="2019-07-08T12:54:35Z" data-provider="excel-inputs" finished-at="2019-07-08T12:55:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manzoorniss@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manzoorniss]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[wrong product]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExcelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1464" started-at="2019-07-08T12:55:01Z" finished-at="2019-07-08T12:55:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="setUp" is-config="true" duration-ms="11796" started-at="2019-07-08T12:55:02Z" finished-at="2019-07-08T12:55:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="ExcelTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="ExcelTest" duration-ms="26477" started-at="2019-07-08T12:55:14Z" data-provider="excel-inputs" finished-at="2019-07-08T12:55:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anandhu@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[anandhuudayan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[4.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[not my item]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExcelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.ComplexExcelTest3@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1458" started-at="2019-07-08T12:55:41Z" finished-at="2019-07-08T12:55:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.regression.tests.ComplexExcelTest3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

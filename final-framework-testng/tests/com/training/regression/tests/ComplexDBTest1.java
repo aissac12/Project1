@@ -63,6 +63,7 @@ public class ComplexDBTest1 {
 		// for demonstration 
 //		genericMethods.getElement("login", "id"); 
 		String price1 = Integer.toString(price);
+		
 		String qty = Integer.toString(quantity);
 		complex.sendUserName(userName); 	
 		complex.sendPassword(password);

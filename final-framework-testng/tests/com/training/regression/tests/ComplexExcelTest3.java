@@ -13,13 +13,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.training.bean.LoginBean;
-import com.training.dao.ELearningDAO;
+//import com.training.bean.LoginBean;
+//import com.training.dao.ELearningDAO;
 import com.training.dataproviders.ComplexDataProviders3;
-import com.training.dataproviders.LoginDataProviders;
+//import com.training.dataproviders.LoginDataProviders;
 import com.training.generics.ScreenShot;
 import com.training.pom.ComplexPOM3;
-import com.training.pom.LoginPOM;
+//import com.training.pom.LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -54,7 +54,12 @@ public class ComplexExcelTest3 {
 	}
 
 	@Test(dataProvider = "excel-inputs", dataProviderClass = ComplexDataProviders3.class)
-	public void ExcelTest(String userName, String password,String comment) throws InterruptedException {
+	public void ExcelTest(String userName, String password,String inp,String open, String comment) throws InterruptedException {
+		//String inp1 = Integer.toString(inp);
+		String x=inp.replace(".0", "");		//to pass as integers to select the radio button for reason
+		String y=open.replace(".0", "");
+		//System.out.println(x);
+		//System.out.println(inp);
 		complexPOM.userLogin();
 		complexPOM.sendUserName(userName);
 		complexPOM.sendPassword(password);
@@ -65,9 +70,12 @@ public class ComplexExcelTest3 {
 		jx.executeScript("window.scrollTo(0, 400)");
 		Thread.sleep(2000);
 		
-		complexPOM.ordReturn(comment);
+		complexPOM.ordReturn(comment,x,y);
 		
-		String Exp3 = "Thank you for submitting your return request. Your request has been sent to the relevant department for processing.";
+		String Exp3a = "Thank you for submitting your return request. Your request has been sent to the relevant department for processing.";
+		String Exp3b = "You will be notified via e-mail as to the status of your request.";
+		String Exp3 = Exp3a+Exp3b;
+		
 		Assert.assertEquals(complexPOM.successftn(),Exp3);
 		screenShot.captureScreenShot(userName);
 		

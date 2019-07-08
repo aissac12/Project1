@@ -34,7 +34,6 @@ public class ApachePOIExcelRead {
 			XSSFSheet sheet = workbook.getSheetAt(0);	//index of sheet,getsheet(sheetname)
 			
 			int rowTotal = sheet.getLastRowNum();
-System.out.println("No of rows : " + rowTotal);
 			if ((rowTotal > 0) || (sheet.getPhysicalNumberOfRows() > 0)) {
 			    rowTotal++;
 			}
@@ -42,7 +41,8 @@ System.out.println("No of rows : " + rowTotal);
 			
 			// Iterate through each rows one by one
 			Iterator<Row> rowIterator = sheet.iterator();
-			 list1 = new String[rowTotal][5];
+			
+			 list1 = new String[rowTotal][2];
 			 
 			while (rowIterator.hasNext()) {
 				Row row = rowIterator.next();
@@ -51,11 +51,8 @@ System.out.println("No of rows : " + rowTotal);
 
 				int cellCount = 0; 
 				int noOfColumns = row.getLastCellNum(); 
-				System.out.println("No of colums : "+ noOfColumns);
 				String[] tempList1 = new String[noOfColumns];
-				
-				
-				
+
 				while (cellIterator.hasNext()) {
 					Cell cell = cellIterator.next();
 					// Check the cell type and format accordingly
