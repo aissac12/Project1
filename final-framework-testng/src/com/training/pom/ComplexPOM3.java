@@ -104,7 +104,7 @@ private WebDriver driver;
 			int inp1=Integer.parseInt(inp);
 			int open1=Integer.parseInt(open);
 			//System.out.println("input1=" + inp1);
-		this.ret_btn.get(inp1).click();
+		this.ret_btn.get(inp1).click();		//choose different radio button foe each run
 		
 		Thread.sleep(1000);
 		this.open_btn.get(open1).click();
